@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../../resource/usuario';
+import { UsuarioService } from '../../service/usuario.service';
 
 @Component({
   selector: 'app-novo-usuario',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoUsuarioComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuario = new Usuario();
+
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
   }
 
+  salvaNovoUsuario(): void {
+    this.usuarioService.salvaNovoUsuario(this.usuario);
+  }
+
+  cancelaNovoUsuario(): void {
+    console.log('cancela');
+  }
 }

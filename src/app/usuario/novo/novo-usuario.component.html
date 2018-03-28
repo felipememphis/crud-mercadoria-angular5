@@ -1,3 +1,58 @@
-<p>
-  novo works!
-</p>
+<app-header></app-header>
+<div class="container py-5">
+  <form>
+      <div class="row">
+          <div class="form-group col-md-6">
+            <label for="mercadoria">Nome</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.nome" name="nome">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="quantidade">Email</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.email" name="email">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="form-group col-md-3">
+            <label for="tipo">Cep</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.endereco.cep" name="cep">
+          </div>
+
+          <div class="form-group col-md-7">
+            <label for="rua">Rua</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.endereco.rua" name="rua">
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="preco">Número</label>
+            <input type="text" class="form-control" [(ngModel)]="usuario.endereco.numero" name="preco">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="form-group col-md-4">
+            <label for="marca">Bairro</label>
+              <input type="text" class="form-control" [(ngModel)]="usuario.endereco.bairro" name="marca">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="marca">Cidade</label>
+              <input type="text" class="form-control" [(ngModel)]="usuario.endereco.cidade" name="marca">
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="marca">Estado</label>
+              <input type="text" class="form-control" [(ngModel)]="usuario.endereco.estado" name="marca">
+            </div>
+      </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <input type="button" class="btn btn-primary" (click)="salvaNovoUsuario()" value="Salvar">
+        <input type="button" class="btn btn-default" (click)="cancelaNovoUsuario()" value="Cancelar">
+      </div>
+    </div>
+  </form>
+</div>
+

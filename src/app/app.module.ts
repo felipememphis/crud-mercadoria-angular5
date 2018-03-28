@@ -14,6 +14,7 @@ import { MercadoriaService } from './service/mercadoria.service';
 import { DetalheUsuarioComponent } from './usuario/detalhe/detalhe-usuario.component';
 import { NovoUsuarioComponent } from './usuario/novo/novo-usuario.component';
 import { ListaUsuariosComponent } from './usuario/lista/lista-usuarios.component';
+import { UsuarioService } from './service/usuario.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { ListaUsuariosComponent } from './usuario/lista/lista-usuarios.component
     FormsModule,
     AppRotasModule
   ],
-  providers: [LoginService, MercadoriaService],
+  providers: [LoginService, MercadoriaService, UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
