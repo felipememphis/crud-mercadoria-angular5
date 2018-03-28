@@ -23,6 +23,7 @@
             <label for="tipo">tipo de mercadoria</label>
             <select class="form-control">
               <option>Selecione</option>
+              <option *ngFor="let tipo of listaTipoMercadoria">{{tipo}}</option>
             </select>
           </div>
 

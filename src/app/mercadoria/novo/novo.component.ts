@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MercadoriaService } from '../../service/mercadoria.service';
 
 @Component({
   selector: 'app-novo',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoComponent implements OnInit {
 
-  constructor() { }
+  listaTipoMercadoria: string[];
+
+  constructor(private mercadoriaService: MercadoriaService) { }
 
   ngOnInit() {
+    this.listaTipoMercadoria = this.mercadoriaService.buscaTipoMercadoria();
+    console.log(this.listaTipoMercadoria);
   }
 
 }

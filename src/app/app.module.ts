@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { NovoComponent } from './mercadoria/novo/novo.component';
 import { DetalheComponent } from './mercadoria/detalhe/detalhe.component';
 import { HeaderComponent } from './header/header.component';
+import { MercadoriaService } from './service/mercadoria.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     AppRotasModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, MercadoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
