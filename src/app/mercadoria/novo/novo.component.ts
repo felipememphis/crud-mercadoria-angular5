@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MercadoriaService } from '../../service/mercadoria.service';
+import { Mercadoria } from './../../resource/mercadoria';
 
 @Component({
   selector: 'app-novo',
@@ -9,12 +10,19 @@ import { MercadoriaService } from '../../service/mercadoria.service';
 export class NovoComponent implements OnInit {
 
   listaTipoMercadoria: string[];
+  mercadoria: Mercadoria = new Mercadoria();
 
   constructor(private mercadoriaService: MercadoriaService) { }
 
   ngOnInit() {
     this.listaTipoMercadoria = this.mercadoriaService.buscaTipoMercadoria();
-    console.log(this.listaTipoMercadoria);
   }
 
+  salvaNovaMercadoria(): void {
+    console.log(this.mercadoria);
+  }
+
+  cancelaNovaMercadoria(): void {
+    this.mercadoria = new Mercadoria();
+  }
 }

@@ -4,24 +4,24 @@
       <div class="row">
           <div class="form-group col-md-4">
             <label for="mercadoria">Mercadoria</label>
-            <input type="text" class="form-control" id="mercadoria">
+            <input type="text" class="form-control" [(ngModel)]="mercadoria.nome" name="nome">
           </div>
 
           <div class="form-group col-md-4">
             <label for="quantidade">Quantidade</label>
-            <input type="text" class="form-control" id="quantidade">
+            <input type="text" class="form-control" [(ngModel)]="mercadoria.quantidade" name="quantidade">
           </div>
 
           <div class="form-group col-md-4">
             <label for="localizacao">Localização no estoque</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="mercadoria.localizacaoEstoque" name="localizacaoEstoque">
           </div>
       </div>
 
       <div class="row">
           <div class="form-group col-md-4">
             <label for="tipo">tipo de mercadoria</label>
-            <select class="form-control">
+            <select class="form-control" [(ngModel)]="mercadoria.tipoMercadoria" name="tipoMercadoria">
               <option>Selecione</option>
               <option *ngFor="let tipo of listaTipoMercadoria">{{tipo}}</option>
             </select>
@@ -29,26 +29,26 @@
 
           <div class="form-group col-md-4">
             <label for="dataValidade">Data da validade</label>
-            <input type="date" class="form-control">
+            <input type="date" class="form-control" [(ngModel)]="mercadoria.dataValidade" name="dataValidade">
           </div>
 
           <div class="form-group col-md-4">
             <label for="preco">Preço</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="mercadoria.preco" name="preco">
           </div>
       </div>
 
       <div class="row">
           <div class="form-group col-md-4">
             <label for="marca">Marca</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" [(ngModel)]="mercadoria.marca" name="marca">
           </div>
       </div>
     <hr />
     <div class="row">
       <div class="col-md-12">
-        <button type="button" class="btn btn-primary">Salvar</button>
-        <a href="#" class="btn btn-default">Cancelar</a>
+        <input type="button" class="btn btn-primary" (click)="salvaNovaMercadoria()" value="Salvar">
+        <input type="button" class="btn btn-default" (click)="cancelaNovaMercadoria()" value="Cancelar">
       </div>
     </div>
   </form>
