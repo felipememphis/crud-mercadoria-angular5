@@ -21,6 +21,6 @@ export class NovoUsuarioComponent implements OnInit {
   }
 
   cancelaNovoUsuario(): void {
-    console.log('cancela');
+    this.usuario = new Usuario();
   }
 }

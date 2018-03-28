@@ -12,6 +12,7 @@ export class Usuario {
     this.nome = '';
     this.email = '';
     this.senha = '';
+    this.dataCadastro = new Date();
     this.endereco = new Endereco();
   }
 }
