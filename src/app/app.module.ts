@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRotasModule } from './rotas/app.rotas.module';
@@ -31,7 +32,8 @@ import { UsuarioService } from './service/usuario.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRotasModule
+    AppRotasModule,
+    HttpClientModule
   ],
   providers: [LoginService, MercadoriaService, UsuarioService],
   bootstrap: [AppComponent]

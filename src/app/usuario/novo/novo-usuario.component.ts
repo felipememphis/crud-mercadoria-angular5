@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Usuario } from '../../resource/usuario';
 import { UsuarioService } from '../../service/usuario.service';
+import { Endereco } from '../../resource/endereco';
 
 @Component({
   selector: 'app-novo-usuario',
@@ -17,10 +19,18 @@ export class NovoUsuarioComponent implements OnInit {
   }
 
   salvaNovoUsuario(): void {
+    this.usuarioService.buscaCep(this.usuario.endereco.cep).subscribe(result => this.montaEndereco(result));
     this.usuarioService.salvaNovoUsuario(this.usuario);
   }
 
   cancelaNovoUsuario(): void {
     this.usuario = new Usuario();
+  }
+
+  private montaEndereco(endereco: any) {
+    this.usuario.endereco.rua = endereco.logradouro;
+    this.usuario.endereco.bairro = endereco.bairro;
+    this.usuario.endereco.cidade = endereco.localidade;
+    this.usuario.endereco.estado = endereco.uf;
   }
 }
