@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AppRotasModule } from './app.rotas.module';
+import { AppRotasModule } from './rotas/app.rotas.module';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './service/login.service';
 import { HomeComponent } from './home/home.component';
+import { NovoComponent } from './mercadoria/novo/novo.component';
+import { DetalheComponent } from './mercadoria/detalhe/detalhe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NovoComponent,
+    DetalheComponent
   ],
   imports: [
     BrowserModule,
