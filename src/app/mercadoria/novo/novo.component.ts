@@ -19,7 +19,7 @@ export class NovoComponent implements OnInit {
   }
 
   salvaNovaMercadoria(): void {
-    console.log(this.mercadoria);
+    this.mercadoriaService.salvaNovaMercadoria(this.mercadoria);
   }
 
   cancelaNovaMercadoria(): void {

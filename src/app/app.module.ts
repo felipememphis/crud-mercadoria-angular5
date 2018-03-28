@@ -11,6 +11,9 @@ import { NovoComponent } from './mercadoria/novo/novo.component';
 import { DetalheComponent } from './mercadoria/detalhe/detalhe.component';
 import { HeaderComponent } from './header/header.component';
 import { MercadoriaService } from './service/mercadoria.service';
+import { DetalheUsuarioComponent } from './usuario/detalhe/detalhe-usuario.component';
+import { NovoUsuarioComponent } from './usuario/novo/novo-usuario.component';
+import { ListaUsuariosComponent } from './usuario/lista/lista-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { MercadoriaService } from './service/mercadoria.service';
     HomeComponent,
     NovoComponent,
     DetalheComponent,
-    HeaderComponent
+    HeaderComponent,
+    DetalheUsuarioComponent,
+    NovoUsuarioComponent,
+    ListaUsuariosComponent
   ],
   imports: [
     BrowserModule,
