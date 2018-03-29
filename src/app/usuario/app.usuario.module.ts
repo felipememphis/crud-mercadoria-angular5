@@ -1,27 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { ListaUsuariosComponent } from './lista/lista-usuarios.component';
 import { NovoUsuarioComponent } from './novo/novo-usuario.component';
 import { DetalheUsuarioComponent } from './detalhe/detalhe-usuario.component';
 import { UsuarioService } from '../service/usuario.service';
-import { HeaderComponent } from '../header/header.component';
+import { AppSharedModule } from '../shared/app.shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    HttpClientModule
+    AppSharedModule
   ],
   declarations: [
     DetalheUsuarioComponent,
     NovoUsuarioComponent,
-    ListaUsuariosComponent,
-    HeaderComponent
+    ListaUsuariosComponent
   ],
-  providers: [UsuarioService],
-  exports: [HeaderComponent, FormsModule, HttpClientModule]
+  providers: [UsuarioService]
 })
 export class AppUsuarioModule { }

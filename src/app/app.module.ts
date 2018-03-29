@@ -5,26 +5,22 @@ import { AppComponent } from './app.component';
 import { AppRotasModule } from './rotas/app.rotas.module';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './service/login.service';
-import { HomeComponent } from './home/home.component';
-import { NovoComponent } from './mercadoria/novo/novo.component';
-import { DetalheComponent } from './mercadoria/detalhe/detalhe.component';
-import { MercadoriaService } from './service/mercadoria.service';
+
 import { AppUsuarioModule } from './usuario/app.usuario.module';
+import { AppMercadoriaModule } from './mercadoria/app.mercadoria.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    HomeComponent,
-    NovoComponent,
-    DetalheComponent
+    LoginComponent
   ],
   imports: [
   BrowserModule,
     AppRotasModule,
-    AppUsuarioModule
+    AppUsuarioModule,
+    AppMercadoriaModule
   ],
-  providers: [LoginService, MercadoriaService],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
