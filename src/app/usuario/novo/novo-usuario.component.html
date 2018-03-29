@@ -14,12 +14,16 @@
       </div>
 
       <div class="row">
-          <div class="form-group col-md-3">
+          <div class="form-group col-md-2">
             <label for="tipo">Cep</label>
             <input type="text" class="form-control" [(ngModel)]="usuario.endereco.cep" name="cep">
           </div>
 
-          <div class="form-group col-md-7">
+          <div class="form-group col-md-2">
+              <input type="button" class="btn btn-primary" (click)="buscaCep()" value="Buscar">
+          </div>
+
+          <div class="form-group col-md-6">
             <label for="rua">Rua</label>
             <input type="text" class="form-control" [(ngModel)]="usuario.endereco.rua" name="rua">
           </div>

@@ -19,8 +19,11 @@ export class NovoUsuarioComponent implements OnInit {
   }
 
   salvaNovoUsuario(): void {
-    this.usuarioService.buscaCep(this.usuario.endereco.cep).subscribe(result => this.montaEndereco(result));
     this.usuarioService.salvaNovoUsuario(this.usuario);
+  }
+
+  buscaCep(): void {
+    this.usuarioService.buscaCep(this.usuario.endereco.cep).subscribe(result => this.montaEndereco(result));
   }
 
   cancelaNovoUsuario(): void {
