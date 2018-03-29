@@ -10,7 +10,7 @@ const appUsuarioRotes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(appUsuarioRotes)],
+  imports: [ RouterModule.forChild(appUsuarioRotes)],
   exports: [RouterModule]
 })
 export class AppMercadoriaRotaModule { }
