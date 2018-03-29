@@ -6,11 +6,13 @@ import { DetalheComponent } from '../mercadoria/detalhe/detalhe.component';
 import { MercadoriaService } from '../service/mercadoria.service';
 import { HomeComponent } from '../home/home.component';
 import { AppSharedModule } from '../shared/app.shared.module';
+import { AppMercadoriaRotaModule } from './app.mercadoria-rota.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    AppSharedModule
+    AppSharedModule,
+    AppMercadoriaRotaModule
   ],
   declarations: [
     HomeComponent,
