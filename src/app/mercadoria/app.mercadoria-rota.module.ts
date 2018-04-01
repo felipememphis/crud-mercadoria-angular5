@@ -6,7 +6,7 @@ import { DetalheComponent } from '../mercadoria/detalhe/detalhe.component';
 
 const appUsuarioRotes: Routes = [
   { path: 'nova-mercadoria', component: NovoComponent },
-  { path: 'detalhe-mercadoria', component: DetalheComponent },
+  { path: 'nova-mercadoria/:id', component: DetalheComponent }
 ];
 
 @NgModule({

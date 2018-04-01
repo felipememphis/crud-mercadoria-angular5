@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalhe',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalheComponent implements OnInit {
 
-  constructor() { }
+  id: string;
+
+  constructor(private route: ActivatedRoute) {
+    this.id = this.route.snapshot.params['id'];
+    console.log(this.id);
+  }
 
   ngOnInit() {
   }
