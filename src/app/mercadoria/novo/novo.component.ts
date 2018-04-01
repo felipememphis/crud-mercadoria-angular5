@@ -21,7 +21,7 @@ export class NovoComponent implements OnInit {
   }
 
   salvaNovaMercadoria(): void {
-    if(this.form.valid) {
+    if (this.form.valid) {
       this.mercadoriaService.salvaNovaMercadoria(this.mercadoria);
     }
   }

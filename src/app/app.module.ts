@@ -8,11 +8,13 @@ import { LoginService } from './service/login.service';
 
 import { AppUsuarioModule } from './usuario/app.usuario.module';
 import { AppMercadoriaModule } from './mercadoria/app.mercadoria.module';
+import { PrimeiroNomeMaiusculoDirective } from './directive/primeiro-nome-maiusculo.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    PrimeiroNomeMaiusculoDirective,
   ],
   imports: [
   BrowserModule,
