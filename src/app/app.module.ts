@@ -8,13 +8,13 @@ import { LoginService } from './service/login.service';
 
 import { AppUsuarioModule } from './usuario/app.usuario.module';
 import { AppMercadoriaModule } from './mercadoria/app.mercadoria.module';
-import { PrimeiroNomeMaiusculoDirective } from './directive/primeiro-nome-maiusculo.directive';
+import { CamelCasePipe } from './pipe/camel-case.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PrimeiroNomeMaiusculoDirective,
+    CamelCasePipe
   ],
   imports: [
   BrowserModule,
