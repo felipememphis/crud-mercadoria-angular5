@@ -7,6 +7,7 @@ import { MercadoriaService } from '../service/mercadoria.service';
 import { HomeComponent } from '../home/home.component';
 import { AppSharedModule } from '../shared/app.shared.module';
 import { AppMercadoriaRotaModule } from './app.mercadoria-rota.module';
+import { EdicaoComponent } from './edicao/edicao.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { AppMercadoriaRotaModule } from './app.mercadoria-rota.module';
   declarations: [
     HomeComponent,
     NovoComponent,
+    EdicaoComponent,
     DetalheComponent
   ],
   providers: [MercadoriaService]
